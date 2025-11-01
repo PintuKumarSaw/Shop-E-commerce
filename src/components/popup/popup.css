@@ -1,0 +1,117 @@
+/* Overlay */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Popup Container */
+.popup-container.offer-layout {
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 700px;
+    max-width: 90%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: slideUp 0.4s ease;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Left Section (text) */
+.popup-left {
+    flex: 1;
+    background: #fff;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.popup-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.popup-offer {
+    font-size: 42px;
+    font-weight: 800;
+    color: #000;
+    margin: 0 0 10px 0;
+}
+
+.popup-desc {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* Shop Button */
+.shop-btn {
+    display: inline-block;
+    background-color: #c8a74e;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.shop-btn:hover {
+    background-color: #b39441;
+}
+
+/* Right Section (image) */
+.popup-right {
+    flex: 1;
+}
+
+.promo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

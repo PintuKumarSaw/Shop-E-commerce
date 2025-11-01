@@ -1,0 +1,202 @@
+.categories-section {
+  margin: 40px 0;
+  width: 100%;
+  text-align: center;
+  padding: 0 30px; /* 👈 space on both sides */
+  box-sizing: border-box;
+}
+
+.categories-carousel {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 40px;  /* 👈 extra padding left & right */
+  scrollbar-width: none;
+  width: 100%;
+}
+
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+.categories-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Category Card */
+.category-card {
+  flex: 0 0 auto;
+  text-align: center;
+  width: 160px;
+}
+
+.category-card .circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card .circle img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.category-card p {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.category-card:hover .circle {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* Prev/Next Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: #f0f0f0;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .category-card {
+    width: 120px;
+  }
+  .category-card .circle {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.banner-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.banner-image {
+  width: 100%;
+  max-width: 1500px; /* Optional: limits banner width */
+  height: auto;
+  border-radius: 50px; /* same rounded edges as your banner */
+  object-fit: contain;
+}
+
+/* 📱 Responsive design */
+@media (max-width: 768px) {
+  .banner-image {
+    max-width: 95%;
+    border-radius: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-image {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+}
+
+.cat{
+  height: 80px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.banner-section {
+  padding:20px;
+}
+
+/* ✅ 3 per row layout */
+.banner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 5px;
+  column-gap: 10px;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.banner-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ✅ Responsive for tablets */
+@media (max-width: 992px) {
+  .banner-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ✅ Responsive for phones */
+@media (max-width: 600px) {
+  .banner-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+

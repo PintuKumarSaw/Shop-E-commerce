@@ -1,0 +1,53 @@
+.auth-modal .MuiBackdrop-root {
+    backdrop-filter: blur(3px);
+}
+
+.auth-modal-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 30px 20px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-btn {
+    border-radius: 25px;
+    padding: 10px 0;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.auth-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button hover effect */
+.close-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: scale(1.1);
+    transition: 0.2s ease;
+}
+
+/* Keep modal box styling */
+.auth-modal-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 40px 20px 20px 20px;
+}

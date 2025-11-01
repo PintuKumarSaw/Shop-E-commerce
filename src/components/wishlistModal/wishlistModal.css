@@ -1,0 +1,123 @@
+/* Overlay */
+.wishlist-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/* Modal box */
+.wishlist-modal {
+    background: #fff;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    position: relative;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Header */
+.wishlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.wishlist-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.close-btn {
+    font-size: 28px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s;
+}
+.close-btn:hover { color: red; }
+
+/* Table layout */
+.wishlist-table {
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 15px;
+}
+
+.wishlist-row,
+.wishlist-header-row {
+    display: grid;
+    grid-template-columns: 80px 2fr 1fr 60px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.wishlist-header-row {
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+}
+
+.wishlist-row img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Remove button */
+.wishlist-row button {
+    background: none;
+    border: none;
+    color: #ff4d4f;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Empty message */
+.empty-msg {
+    text-align: center;
+    color: gray;
+    margin-top: 25px;
+}
+
+/* Scrollbar */
+.wishlist-table::-webkit-scrollbar {
+    width: 6px;
+}
+.wishlist-table::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .wishlist-row, .wishlist-header-row {
+        grid-template-columns: 60px 2fr 1fr 50px;
+        font-size: 14px;
+    }
+    .wishlist-row img { width: 50px; height: 50px; }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}

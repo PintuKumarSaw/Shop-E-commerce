@@ -1,0 +1,234 @@
+.footer {
+    background: #f8fdf8;
+    margin-top: 40px;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+/* Newsletter Section */
+.newsletter {
+    background: #d8fce5;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.newsletter-text h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.newsletter-text p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.subscribe {
+    display: flex;
+    gap: 10px;
+}
+
+.subscribe input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    flex: 1;
+}
+
+.subscribe button {
+    padding: 10px 20px;
+    border: none;
+    background: #28a745;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.subscribe button:hover {
+    background: #218838;
+}
+
+.newsletter-img img {
+    max-width: 400px;
+    max-height: 200px;
+}
+
+/* Features Row */
+.features-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.feature-box {
+    flex: 1 1 200px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.feature-box img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer-about {
+    flex: 1 1 250px;
+}
+
+.footer-about p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 15px;
+    height: 80px;
+    width: 70px;
+}
+
+.footer-links {
+    display: flex;
+    flex: 2;
+    gap: 50px;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.footer-links h5 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.footer-links a {
+    display: block;
+    margin-bottom: 6px;
+    color: #444;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #28a745;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .newsletter {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .subscribe {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .features-row {
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 40px 20px;
+  background: #f8fdf8;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* .footer-about img.footer-logo {
+  width: 140px;
+  margin-bottom: 15px;
+} */
+
+.footer-contact p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-col h5 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #111;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col a:hover {
+  color: #1bb56d;
+}
+
+/* Responsive for tablets */
+@media (max-width: 992px) {
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .footer-links {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-contact p {
+    justify-content: center;
+  }
+}
